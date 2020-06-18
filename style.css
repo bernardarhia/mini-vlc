@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEE9E9;
+}
+
+.fa {
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.togglebar {
+    width: 100%;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: .4s;
+}
+
+.togglebar .showname {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 20px;
+}
+
+.player:hover .togglebar {
+    top: 0;
+}
+
+.player:hover .controls {
+    bottom: 0;
+}
+
+.audio-style {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: .4s;
+    border: 2px solid #fff;
+    border-top-color: #f74e4e;
+    border-bottom-color: #f5711a;
+    animation: spin .5s ease-in forwards infinite;
+    box-shadow: 2px 0 10px #000;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.player {
+    width: 96%;
+    margin: 50px auto;
+    position: relative;
+    height: 300px;
+    box-shadow: 2px 4px 10px #000;
+    background: #fff;
+    overflow: hidden;
+}
+
+.player #fileInput,
+input {
+    display: none;
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+}
+
+.player .controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    height: 40px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    transition: .4s;
+}
+
+.player .controls .control-icons {
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
